@@ -37,11 +37,24 @@
         <section id="services">
             <h2>Об услугах</h2>
             <p>Мы предлагаем установку системы взвешивания в движении SMARTWIM, которая позволяет точно измерять вес транспортных средств в движении, обеспечивая высокую точность и надежность.</p>
-            <video controls>
-                <source src="smartwim.mp4"  controls playsinline type="video/mp4">
-                Ваш браузер не поддерживает воспроизведение видео.
-            </video>
+            
+            <!-- Контейнер для видео с постером -->
+            <div class="video-wrapper">
+                <!-- Постер-картинка для предварительного просмотра -->
+                <div class="video-poster" onclick="playVideo()">
+                    <img src="log.png" alt="Видео SMARTWIM">
+                    <button class="play-button">&#9658;</button>
+                </div>
+                
+                <!-- YouTube видео, скрытое по умолчанию -->
+                <div class="video-container">
+                    <iframe id="youtubeVideo" src="https://www.youtube.com/embed/-N_ZxD0DudM?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
         </section>
+        
+        
+        
 
         <section id="contact">
             <h2>Свяжитесь с нами</h2>
@@ -57,5 +70,7 @@
     <footer>
         <p>&copy; 2024 Automatic Systems. Все права защищены.</p>
     </footer>
+    <script src="video-player.js"></script>
+
 </body>
 </html>
