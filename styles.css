@@ -1,0 +1,181 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+    box-sizing: border-box; /* Включаем box-sizing для всей страницы */
+}
+
+header {
+    background-color: #003366;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+header h1, header .service-name {
+    margin: 0;
+}
+
+header .service-name {
+    font-size: 1.2rem;
+    color: #ffcc00;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    background-image: url('avto.jpeg'); /* Указываем правильный путь к вашему изображению */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.5rem;
+    padding: 0; /* Убираем внутренние отступы */
+    box-sizing: border-box;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    width: 100%; /* Растягиваем контент на всю ширину */
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 0; /* Убираем отступ сверху */
+    box-sizing: border-box;
+}
+
+section {
+    width: 100%;
+    padding: 2rem;
+    margin: 0; /* Убираем внешние отступы */
+    border: none; /* Убираем границы */
+    box-sizing: border-box;
+}
+
+section#about {
+    background-color: #003366;
+    color: #fff;
+}
+
+section#services {
+    background-color: #e0e0e0;
+}
+
+section#contact {
+    background-color: #fff;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    display: block; /* Убираем отступы снизу */
+}
+
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-content {
+        align-items: center;
+    }
+
+    header h1, header .service-name {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+
+    .overlay {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+
+    .overlay h1, .overlay h2 {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 0.5rem;
+    }
+}
